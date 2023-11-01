@@ -8,7 +8,7 @@ def is_prime(n):
             return False
     return True
 
- """
+"""
    Check for Prime Numbers
 
     This function verifies whether a provided number is a prime number. A prime number is defined as a number greater than 1 that has no divisors other than 1 and itself.
@@ -26,5 +26,5 @@ def is_prime(n):
     >>> is_prime(4)
     False
     
-    """
+"""
     
