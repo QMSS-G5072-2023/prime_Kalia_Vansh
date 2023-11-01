@@ -1,21 +1,7 @@
 from prime_kalia_vansh import prime_kalia_vansh
-import pytest
 import math
 
-def test_is_prime():
-    assert is_prime(2) is True
-    assert is_prime(7) is True
-    assert is_prime(8) is False
-    assert is_prime(9) is False
-
-@pytest.mark.parametrize("n, expected", [
-    (2, True),
-    (7, True),
-    (8, False),
-    (9, False),
-    (-1, False),
-    (0, False),
-    (1, False)
-])
-def test_is_prime_param(n, expected):
-    assert is_prime(n) == expected
+def test_is_prime_param(param=[(2, True), (7, True), (4, False), (10, False), (0, False), (1, False), (-3, False)]):
+    for number, is_prime_expected in param:
+        is_prime_actual = prime_kalia_vansh.is_prime(number)
+        assert is_prime_expected == is_prime_actual, f"Value {number} is not a prime number (Expected: {is_prime_expected}, Actual: {is_prime_actual})"
