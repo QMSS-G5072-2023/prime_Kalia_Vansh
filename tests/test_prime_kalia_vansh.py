@@ -1,4 +1,5 @@
 from prime_kalia_vansh import prime_kalia_vansh
+import pytest
 import math
 
 def test_is_prime():
